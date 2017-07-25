@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Copyright (c) 2012-2014, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
->>>>>>> 439bbba... soc: qcom: pil: Avoid possible buffer overflow during Modem boot
-=======
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
->>>>>>> 439bbba... soc: qcom: pil: Avoid possible buffer overflow during Modem boot
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
