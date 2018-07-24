@@ -51,7 +51,9 @@ static char rt_ert_flag;
 static char formatting_dir;
 static unsigned char sig_blend = CTRL_ON;
 static DEFINE_MUTEX(iris_fm);
+#ifndef MODULE
 static int transport_ready = -1;
+#endif
 
 module_param(rds_buf, uint, 0);
 MODULE_PARM_DESC(rds_buf, "RDS buffer entries: *100*");
@@ -5246,15 +5248,12 @@ static const struct v4l2_ioctl_ops iris_ioctl_ops = {
 
 #ifndef MODULE
 extern int radio_hci_smd_init(void);
-
 static int iris_fops_open(struct file *f) {
 	if (transport_ready < 0) {
 		transport_ready = radio_hci_smd_init();
 	}
 	return transport_ready;
 }
-#else 
-extern int radio_hci_smd_init(void);
 #endif
 
 static const struct v4l2_file_operations iris_fops = {
